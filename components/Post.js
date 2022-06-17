@@ -7,13 +7,17 @@ import Link from "next/link";
 import { userDetailByUsername } from "../src/graphql/queries";
 import { readingTime } from "reading-time-estimator";
 import { API } from "aws-amplify";
+import Image from "next/image"
 const Post = ({ post, styles }) => {
   const router = useRouter();
   const [image, setImage] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
-  React.useEffect(async () => {
+  React.useEffect(()=>{
+    FetchData();
+  }, [post.userImage]);
+  //get cover image from post
+ const FetchData=async () => {
     //fetch userAttributes from API
-
     const userDetails = await API.graphql({
       query: userDetailByUsername,
       variables: {
@@ -28,9 +32,7 @@ const Post = ({ post, styles }) => {
       console.log(userImageKey);
       setImage(userImageKey);
     }
-  }, [post.userImage]);
-  //get cover image from post
-
+  }
   console.log(post);
   return (
     <Link href={`/posts/${post.id}`}>

@@ -113,6 +113,10 @@ export const getPost = /* GraphQL */ `
           username
           createdAt
           updatedAt
+          commentReactions{
+            emoji
+            by
+          }
         }
         nextToken
       }
