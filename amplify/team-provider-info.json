@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blackbird-dev-163302-authRole",
+      "UnauthRoleArn": "arn:aws:iam::595758469892:role/amplify-blackbird-dev-163302-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::595758469892:role/amplify-blackbird-dev-163302-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-blackbird-dev-163302-deployment",
+      "UnauthRoleName": "amplify-blackbird-dev-163302-unauthRole",
+      "StackName": "amplify-blackbird-dev-163302",
+      "StackId": "arn:aws:cloudformation:us-east-1:595758469892:stack/amplify-blackbird-dev-163302/61e9a900-d763-11ec-b96a-12e46fbfc069",
+      "AmplifyAppId": "d1dc1ka59v9kl9"
+    },
+    "categories": {
+      "auth": {
+        "blackbird60259a2c": {},
+        "true": {}
+      }
+    }
+  }
+}

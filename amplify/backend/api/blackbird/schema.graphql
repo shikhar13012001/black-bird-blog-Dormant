@@ -1,0 +1,129 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY {
+  globalAuthRule: AuthRule = { allow: public }
+} # FOR TESTING ONLY!
+type Likes {
+  emoji: String
+  by: String
+}
+type UserAttributes
+  @model(subscriptions: { level: public })
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "username" }
+      { allow: private, operations: [read, update] }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  profileImage: String
+  userId: String! @index(name: "UserDetailById", queryField: "UserDetailById")
+  username: String!
+    @index(name: "UserDetailByUsername", queryField: "UserDetailByUsername")
+  follow: [String]
+}
+type Post
+  @searchable
+  @model(subscriptions: { level: public })
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "username" }
+      { allow: private, operations: [create, update, read] }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String!
+    @index(
+      name: "postsBytitle"
+      queryField: "postsBytitle"
+      sortKeyFields: ["createdAt"]
+    )
+  content: String!
+  description: String
+  username: String
+    @index(
+      name: "postsByUsername"
+      queryField: "postsByUsername"
+      sortKeyFields: ["createdAt"]
+    )
+  coverImage: String
+  postTags: [tags]
+  likes: Int @default(value: "0")
+  reactions: [Likes]
+  comments: [Comment] @hasMany(indexName: "byPost", fields: ["id"])
+  userImage: String
+  Category: [category]
+  createdAt: AWSDateTime
+  email: AWSEmail
+}
+type Comment
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "username" }
+      { allow: private, operations: [create, update, read] }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  postId: ID! @index(name: "byPost", sortKeyFields: ["content"])
+  content: String!
+  username: String!
+  commentReactions: [Likes]
+}
+
+enum tags {
+  Modern
+  Art
+  Tech
+  Cloud
+  Node
+  React
+  Life
+  Ben10
+  Design
+  Question
+  Photography
+  Food
+  Travel
+  Space
+  Music
+  Sports
+  Fashion
+  Film
+  Games
+  Comedy
+  History
+  Science
+  Health
+  Politics
+}
+
+enum category {
+  Modern
+  Art
+  Tech
+  Cloud
+  Node
+  React
+  Life
+  Ben10
+  Design
+  Question
+  Photography
+  Food
+  Travel
+  Space
+  Music
+  Sports
+  Fashion
+  Film
+  Games
+  Comedy
+  History
+  Science
+  Health
+  Politics
+}

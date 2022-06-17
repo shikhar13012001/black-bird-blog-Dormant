@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "blackbird",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\Personal Projects\\black-bird\\amplify\\backend\\api\\blackbird\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authblackbird60259a2c"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-05-19T11:43:25.731Z",
+        "keyDescription": "API_KEY"
+      }
+    ]
+  }
+}

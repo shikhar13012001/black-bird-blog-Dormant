@@ -1,0 +1,8 @@
+{
+  "AppSyncApiName": "blackbird",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": ["authblackbird60259a2c", "Outputs.UserPoolId"]
+  }
+}
