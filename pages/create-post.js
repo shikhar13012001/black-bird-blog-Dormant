@@ -11,8 +11,8 @@ import { userDetailById } from "../src/graphql/queries";
 import { useNotifications } from "@mantine/notifications";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Tags } from "../utils/constants";
-import { Container,Typography,Box,TextField } from "@mui/material";
-import { MultiSelect } from "@mantine/core"; 
+import { Container, Typography, Box, TextField } from "@mui/material";
+import { MultiSelect } from "@mantine/core";
 import ImageIcon from "@mui/icons-material/Image";
 import PublishIcon from "@mui/icons-material/Publish";
 import { handleImageUpload } from "../utils/FileUpload";
@@ -21,7 +21,7 @@ import _ from "lodash";
 
 function CreatePost() {
   const initialState = { title: "", content: "" };
-  const [disable,setDisable]=useState(false)
+  const [disable, setDisable] = useState(false);
   const [open, setOpen] = useState(false);
   const [tags, setTags] = useState([]);
   const [category, setCategory] = useState([]);
@@ -29,7 +29,7 @@ function CreatePost() {
   const [image, setImage] = useState(null);
   const hiddenFileInput = useRef(null);
   const { title, content, description } = post;
-  const router = useRouter(); 
+  const router = useRouter();
   const onChange = (e) => {
     setPost((t) => ({ ...t, [e.target.name]: e.target.value }));
   };
@@ -49,7 +49,7 @@ function CreatePost() {
       return;
     }
     const id = uuid();
-    setDisable(true)
+    setDisable(true);
     showNotification({ loading: true });
     post.id = id;
     //settags here
@@ -75,12 +75,12 @@ function CreatePost() {
       },
       authMode: "AMAZON_COGNITO_USER_POOLS",
     });
- 
+
     // get a random userImage
     const userImage =
       userDetails.data.UserDetailById.items[0]?.profileImage ||
       `https://avatars.dicebear.com/api/initials/john%20hanma.svg?background=%230000ff`;
-   
+
     // Create the post
     await API.graphql({
       query: createPost,
@@ -105,9 +105,8 @@ function CreatePost() {
       autoClose: false,
       icon: <CheckCircleIcon sx={{ fill: "lightgreen" }} />,
     });
-    setDisable(false)
+    setDisable(false);
     router.push(`/posts/${id}`);
-    
   };
   const uploadImage = () => {
     hiddenFileInput.current.click();
@@ -123,29 +122,27 @@ function CreatePost() {
   );
   return (
     <Container sx={{ minHeight: "100vh" }}>
-      <Typography variant="h3">
-        Create new post
-      </Typography>
+      <Typography variant="h3">Create new post</Typography>
       <Alert open={open} setOpen={setOpen} />
       <TextField
-      variant="filled"
+        variant="filled"
         onChange={onChange}
         name="title"
         placeholder="Title"
         label="Title"
         value={post.title}
         fullWidth
-        sx={{mb:2}}
+        sx={{ mb: 2 }}
       />
       <TextField
-      variant="filled"
+        variant="filled"
         onChange={onChange}
         name="description"
         placeholder="Description"
         label="Description"
         value={post.description}
-       fullWidth
-        sx={{mb:5}}
+        fullWidth
+        sx={{ mb: 5 }}
       />
       {image && (
         <img src={URL.createObjectURL(image)} className="my-4" alt="image" />
@@ -196,7 +193,7 @@ function CreatePost() {
         <ImageIcon className="ml-2" />
       </button>
       <button
-      disable={disable}
+        disable={disable}
         type="button"
         className="mb-4 bg-blue-600 text-white  px-8 py-2 rounded-lg"
         style={{ width: "20em", marginTop: 3, marginBottom: 5 }}

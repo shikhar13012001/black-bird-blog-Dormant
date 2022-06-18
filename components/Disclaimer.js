@@ -3,7 +3,11 @@ import Developer from "../public/developer.jpeg";
 import Image from "next/image";
 import { Typography, Grid, Container } from "@mui/material";
 import Link from "next/link";
-const Center={display:"flex",flexDirection:'column',justifyContent:'center'}
+const Center = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+};
 const Disclaimer = () => {
   return (
     <Container>

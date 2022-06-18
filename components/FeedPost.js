@@ -11,11 +11,11 @@ const Post = ({ post, styles }) => {
   const router = useRouter();
   const [image, setImage] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
-  React.useEffect(()=>{
+  React.useEffect(() => {
     FetchData();
   }, [post.userImage]);
   //get cover image from post
-const FetchData=async () => {
+  const FetchData = async () => {
     //fetch userAttributes from API
     //get coverImage
     const coverImageKey = await Storage.get(post.coverImage);
@@ -34,7 +34,7 @@ const FetchData=async () => {
       console.log(userImageKey);
       setImage(userImageKey);
     }
-  }
+  };
   console.log(post);
   return (
     <Link href={`/posts/${post.id}`}>

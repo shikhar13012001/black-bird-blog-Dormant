@@ -24,7 +24,7 @@ const Search = () => {
         },
       });
       console.log(result.data.searchPosts);
-        setPosts(result.data.searchPosts.items);
+      setPosts(result.data.searchPosts.items);
     } catch (err) {
       console.log(err);
     }
@@ -32,9 +32,9 @@ const Search = () => {
 
   return (
     <Container sx={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-        <Typography variant="h1" sx={{fontWeight:"bold",mt:5}}>
-            Search results for <span style={{color:'blue'}}>{query.q}</span>
-            </Typography>
+      <Typography variant="h1" sx={{ fontWeight: "bold", mt: 5 }}>
+        Search results for <span style={{ color: "blue" }}>{query.q}</span>
+      </Typography>
       {posts.map((post, index) => {
         return <FeedPost key={index} post={post} />;
       })}

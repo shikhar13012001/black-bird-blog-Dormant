@@ -24,8 +24,8 @@ import { CgFeed, CgProfile } from "react-icons/cg";
 import SEO from "../components/SEO";
 import { ImBlog } from "react-icons/im";
 import config from "../aws-exports";
-import Search from "../components/Search"
-import {BsSearch} from "react-icons/bs"
+import Search from "../components/Search";
+import { BsSearch } from "react-icons/bs";
 Amplify.configure({ ...config, ssr: true });
 
 function MyApp({ Component, pageProps }) {
@@ -56,86 +56,85 @@ function MyApp({ Component, pageProps }) {
   const theme = createTheme();
   return (
     <>
-     <SEO
+      <SEO
         title={"Black Bird"}
         description="With black bird you can share and write amazing articles on the internet about almost everything"
         url={"https://black-bird-shikhar13012001.vercel.app/"}
         image="https://i.ibb.co/T10PvgC/Screenshot-151.png"
       />
-    <Authenticator>
-     
-      {({ signOut, user }) => (
-        <div style={{ minHeight: "100vh" }}>
-          <Announcement />
-          <IconContext.Provider
-            value={{
-              color: "gray",
-              style: { marginRight: "10px" },
-              size: "1.6em",
-            }}
-          >
-            <NotificationsProvider>
-              <ThemeProvider theme={theme}>
-                <div style={{ minHeight: "90vh" }}>
-                  {window.innerWidth > 800 ? (
-                    <nav className="p-6 border-b border-gray-300 items-center flex">
-                      <Link href="/">
-                        <span className="mr-auto cursor-pointer">
-                          <Image src={Logo} alt="logo" className="w-12" />
-                        </span>
-                      </Link>
-                      <span className="m-auto cursor-pointer">
-                      <Search />
-                      </span>
-                      <Link href="/create-post">
-                        <span className="mr-6 cursor-pointer">
-                          <GoMarkdown />
-                          Create Post
-                        </span>
-                      </Link>
-                      <HeaderExtendedMenu />
-                      <CategoryExtendedMenu />
-                      <Link href="/profile">
-                        <span className="mr-6 cursor-pointer">
-                          <CgProfile />
-                          Profile
-                        </span>
-                      </Link>
-                        
-                      <Link href="/Feed">
-                        <span className="mr-6 cursor-pointer">
-                          <CgFeed />
-                          Feed
-                        </span>
-                      </Link>
-                      {signedInUser && (
-                        <Link href="/my-posts">
-                          <span className="mr-6 cursor-pointer">
-                            <ImBlog />
-                            My Posts
+      <Authenticator>
+        {({ signOut, user }) => (
+          <div style={{ minHeight: "100vh" }}>
+            <Announcement />
+            <IconContext.Provider
+              value={{
+                color: "gray",
+                style: { marginRight: "10px" },
+                size: "1.6em",
+              }}
+            >
+              <NotificationsProvider>
+                <ThemeProvider theme={theme}>
+                  <div style={{ minHeight: "90vh" }}>
+                    {window.innerWidth > 800 ? (
+                      <nav className="p-6 border-b border-gray-300 items-center flex">
+                        <Link href="/">
+                          <span className="mr-auto cursor-pointer">
+                            <Image src={Logo} alt="logo" className="w-12" />
                           </span>
                         </Link>
-                      )}
-                    </nav>
-                  ) : (
-                    <nav className="p-6 border-b border-gray-300 items-center flex">
-                      <Link href="/">
-                        <span className="mr-auto cursor-pointer">
-                          <Image src={Logo} alt="logo" className="w-12" />
+                        <span className="m-auto cursor-pointer">
+                          <Search />
                         </span>
-                      </Link>
-                      <NavBar />
-                    </nav>
-                  )}
-                  <Component {...pageProps} />
-                </div>
-              </ThemeProvider>
-            </NotificationsProvider>
-          </IconContext.Provider>
-          <Footer />
-        </div>
-      )}
-    </Authenticator>
+                        <Link href="/create-post">
+                          <span className="mr-6 cursor-pointer">
+                            <GoMarkdown />
+                            Create Post
+                          </span>
+                        </Link>
+                        <HeaderExtendedMenu />
+                        <CategoryExtendedMenu />
+                        <Link href="/profile">
+                          <span className="mr-6 cursor-pointer">
+                            <CgProfile />
+                            Profile
+                          </span>
+                        </Link>
+
+                        <Link href="/Feed">
+                          <span className="mr-6 cursor-pointer">
+                            <CgFeed />
+                            Feed
+                          </span>
+                        </Link>
+                        {signedInUser && (
+                          <Link href="/my-posts">
+                            <span className="mr-6 cursor-pointer">
+                              <ImBlog />
+                              My Posts
+                            </span>
+                          </Link>
+                        )}
+                      </nav>
+                    ) : (
+                      <nav className="p-6 border-b border-gray-300 items-center flex">
+                        <Link href="/">
+                          <span className="mr-auto cursor-pointer">
+                            <Image src={Logo} alt="logo" className="w-12" />
+                          </span>
+                        </Link>
+                        <NavBar />
+                      </nav>
+                    )}
+                    <Component {...pageProps} />
+                  </div>
+                </ThemeProvider>
+              </NotificationsProvider>
+            </IconContext.Provider>
+            <Footer />
+          </div>
+        )}
+      </Authenticator>
     </>
   );
 }

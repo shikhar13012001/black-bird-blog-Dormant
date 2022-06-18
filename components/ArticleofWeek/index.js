@@ -1,4 +1,4 @@
-import { Grid,Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Test from "../../public/testimonial.jpg";
 import Image from "next/image";
@@ -28,7 +28,7 @@ const Article = () => {
             lg: 128,
             md: 96,
             sm: 72,
-            xs:100,
+            xs: 100,
           }}
           sx={{ fontWeight: "light", color: "white", mt: 3 }}
         >

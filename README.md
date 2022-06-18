@@ -5,26 +5,20 @@
 This project is an educational asset demonstrating the use of AWS amplify, Graphql API, Appsync, Material UI and amazon cognito.
 This project belongs to Black bird and this repo will remain dormant until final decision.
 
-
-
 ## Authors
 
 - [@shikhar13012001](https://www.github.com/shikhar13012001)
-
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-
-
 ## Tech Stack
 
-**Client:** ```Nextjs```,``` Material UI```, ```Amplify react components```
+**Client:** `Nextjs`,` Material UI`, `Amplify react components`
 
-**Server:** ```AWS AMPLIFY``` ```AWS APPSYNC``` ```AMAZON COGNITO```
-
+**Server:** `AWS AMPLIFY` `AWS APPSYNC` `AMAZON COGNITO`
 
 ## Screenshots
 
@@ -67,6 +61,7 @@ This project belongs to Black bird and this repo will remain dormant until final
 ![](https://i.ibb.co/DDmm4w7/Screenshot-180.png)
 
 ![](https://i.ibb.co/XFc1TC5/Screenshot-181.png)
+
 ## Features
 
 - User Authentication with email verification
@@ -78,9 +73,8 @@ This project belongs to Black bird and this repo will remain dormant until final
 - Profile Image support
 - Follow other User support.
 
-
-
 ## This project is dormant and no longer in use.
+
 ## Roadmap
 
 - Adding custom Feed and posts
@@ -89,9 +83,6 @@ This project belongs to Black bird and this repo will remain dormant until final
 
 - Add bookmark and repost a post
 
-
-
-
 ## Deployment
- This project is not deployed due to cost  from aws services
 
+This project is not deployed due to cost from aws services

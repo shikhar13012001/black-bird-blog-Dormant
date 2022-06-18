@@ -50,7 +50,7 @@ const Feed = () => {
 
   return (
     <Container sx={{ position: "relative" }}>
-      <Typography variant="h1" sx={{fontWeight:"bold",mt:5}}>
+      <Typography variant="h1" sx={{ fontWeight: "bold", mt: 5 }}>
         Your Daily Feed
       </Typography>
       {Object.keys(posts)

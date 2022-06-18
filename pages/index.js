@@ -160,7 +160,7 @@ export default function Home() {
       >
         Create Creative Content
       </Typography>
-      <Box sx={{ width:"100%",display: "grid", placeContent:'center' }}>
+      <Box sx={{ width: "100%", display: "grid", placeContent: "center" }}>
         <Image src={Thunder} alt="thunder svg" />
       </Box>
       <Typography variant="body1" sx={{ textAlign: "center", mt: 3 }}>
