@@ -53,7 +53,15 @@ function MyApp({ Component, pageProps }) {
   }
   const theme = createTheme();
   return (
+    <>
+     <SEO
+        title={"Black Bird"}
+        description="With black bird you can share and write amazing articles on the internet about almost everything"
+        url={"https://black-bird-shikhar13012001.vercel.app/"}
+        image="https://i.ibb.co/T10PvgC/Screenshot-151.png"
+      />
     <Authenticator>
+     
       {({ signOut, user }) => (
         <div style={{ minHeight: "100vh" }}>
           <Announcement />
@@ -67,8 +75,6 @@ function MyApp({ Component, pageProps }) {
             <NotificationsProvider>
               <ThemeProvider theme={theme}>
                 <div style={{ minHeight: "90vh" }}>
-                  <SEO />
-
                   {window.innerWidth > 800 ? (
                     <nav className="p-6 border-b border-gray-300 items-center flex">
                       <Link href="/">
@@ -124,6 +130,7 @@ function MyApp({ Component, pageProps }) {
         </div>
       )}
     </Authenticator>
+    </>
   );
 }
 

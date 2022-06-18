@@ -1,33 +1,27 @@
 import Head from "next/head";
 
-const SEO = () => {
+const SEO = ({ title, url, image, description }) => {
   return (
     <Head>
-      <title>Black Bird</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content="Black-bird blog, create view share" />
       <meta
-        name="description"
-        content="Black Bird is a platform for sharing ideas, knowledge, and resources."
+        property="og:description"
+        content="With black bird you can share and write amazing articles on the internet about almost everything"
       />
+      <meta property="og:image" content={image} />
+      <meta property="twitter:card" content="summary_large_image" />
       <meta
-        name="keywords"
-        content="black bird, black bird platform, black bird ideas, black bird knowledge, black bird resources"
-      />
-      <meta
-        name="author"
-        content="Black Bird is a platform for sharing ideas, knowledge, and resources."
-      />
-      <meta name="og:title" content="Black Bird" key="og:title" />
-      <meta
-        name="og:description"
-        content="Black Bird is a platform for sharing ideas, knowledge, and resources."
-        key="og:description"
-      />
-      <meta
-        name="og:url"
+        property="twitter:url"
         content="https://black-bird-shikhar13012001.vercel.app/"
-        key="og:url"
       />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
     </Head>
   );
 };

@@ -1,8 +1,9 @@
+import Image from "next/image";
 import React from "react";
 const Error = () => {
   return (
     <div className="bg-indigo-900 relative overflow-hidden h-screen">
-      <img
+      <Image
         src="https://www.tailwind-kit.com/images/landscape/8.svg"
         className="absolute h-full w-full object-cover"
       />

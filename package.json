@@ -32,6 +32,7 @@
     "aos": "^2.3.4",
     "aws-amplify": "^4.3.16",
     "aws-sdk": "^2.1109.0",
+    "curvetext": "^1.0.4",
     "disqus-react": "^1.1.2",
     "github-fork-ribbon-css": "^0.2.3",
     "graphql-default-value-transformer": "^2.0.1",

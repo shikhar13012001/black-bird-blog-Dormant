@@ -26,6 +26,14 @@
   font-family: "BlackBird";
   src: url("../fonts/projekt-blackbird-v2.otf");
 }
+@font-face {
+  font-family: "BlackBird";
+  src: url("../fonts/projekt-blackbird-v2.otf");
+}
+@font-face {
+  font-family: "Moniqa";
+  src: url("../fonts/Moniqa-Display.otf");
+}
 * {
   font-family: "BlackBird" !important;
 }

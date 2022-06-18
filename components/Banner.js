@@ -6,7 +6,7 @@ import Icon from "@mui/material/Icon";
 import Discord from "../public/discord.svg";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-import BG from "../public/home.svg";
+import Marquee from "react-fast-marquee";
 import { Tags } from "../utils/constants";
 const Banner = () => {
   const heightBanner = useMediaQuery("(max-width:800px)") ? "70vh" : "130vh";
@@ -19,10 +19,14 @@ const Banner = () => {
     );
   };
   const URL =
-    "https://todoist.com/_next/static/images/header@2x_b52d8f7c7bf19d6c702569d1072ed6a2.webp";
+    "https://assets.website-files.com/5ddc830bab1008eb8a0a0d78/6120185d6391bbcfce0afadb_Frame%2012.svg";
+  // "https://i.ibb.co/wRkYmS1/favpng-bird-wall-decal-flight-swallow.png";
+  // "https://todoist.com/_next/static/images/header@2x_b52d8f7c7bf19d6c702569d1072ed6a2.webp";
   return (
     <Container
       className="animate__animated animate__zoomIn"
+      disableGutters={true}
+      maxWidth={false}
       sx={{
         width: "100%",
         display: "flex",
@@ -37,26 +41,14 @@ const Banner = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <Stack
-        direction={"row"}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          overflowX: "scroll",
-          "::-webkit-scrollbar": {
-            display: "none",
-          },
-          scrollDirection: "horizontal",
-        }}
-      >
+      <Marquee pauseOnHover={true}>
         {Tags.map((text, index) => (
           <Link href={`/tags/${text}`} key={index}>
             <Chip label={text} variant="outlined" sx={{ m: 1 }} />
           </Link>
         ))}
-      </Stack>
+      </Marquee>
+
       <Typography
         variant="h1"
         className="mt-3 my-3 text-center animate__animated animate__backInUp"
@@ -68,9 +60,14 @@ const Banner = () => {
         }}
         sx={{ mt: 5, mb: 3, fontFamily: "MostWasted!important" }}
       >
-        @BlackBird
+        @BlackBird{" "}
+        <Image
+          src="https://i.ibb.co/wRkYmS1/favpng-bird-wall-decal-flight-swallow.png"
+          alt="bird"
+          width={100}
+          height={100}
+        />
       </Typography>
-
       <Stack
         direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
         spacing={2}

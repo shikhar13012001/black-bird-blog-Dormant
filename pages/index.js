@@ -20,6 +20,7 @@ import CircularHeading from "../components/CircularHeading";
 import * as THREE from "three";
 import BIRDS from "vanta/dist/vanta.birds.min";
 import Team from "../components/Team";
+import Article from "../components/ArticleofWeek";
 const style = {
   Container: {
     width: "100%",
@@ -82,8 +83,8 @@ export default function Home() {
           minWidth: 100,
           backgroundColor: 0xffffff,
           colorMode: "lerp",
-          color1: "yellow",
-          color2: "purple",
+          color1: "black",
+          color2: "white",
           speedLimit: 5.0,
           separation: 20.0,
           alignment: 20.0,
@@ -134,7 +135,7 @@ export default function Home() {
         Fork me on GitHub
       </a>
       <Banner />
-
+     
       <Divider sx={{ mb: 3 }} />
       <Typography
         fontSize={{
@@ -192,6 +193,7 @@ export default function Home() {
           <Link href="/Feed">view Feed</Link>
         </Button>
       </Container>
+      <Article />
       <Box
         sx={{ position: "relative", width: "100%", minHeight: "100vh", mt: 20 }}
         data-aos="fade-up"
