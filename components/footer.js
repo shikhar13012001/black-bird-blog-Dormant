@@ -9,13 +9,14 @@ const Footer = () => {
         width: "100%",
         backgroundColor: "black",
         color: "white",
+        padding:10
       }}
     >
       <Typography
         variant="body1"
         style={{ color: "white", textAlign: "center" }}
       >
-        This asset/project was built by Shikhar, so fuck off
+        This asset/project was built by Black Bird 🚀.
       </Typography>
     </footer>
   );

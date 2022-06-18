@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![](https://i.ibb.co/mHWBP81/logo.png)
 
-## Getting Started
+# Black Bird Blog
 
-First, run the development server:
+This project is an educational asset demonstrating the use of AWS amplify, Graphql API, Appsync, Material UI and amazon cognito.
+This project belongs to Black bird and this repo will remain dormant until final decision.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Authors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [@shikhar13012001](https://www.github.com/shikhar13012001)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+[MIT](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Client:** ```Nextjs```,``` Material UI```, ```Amplify react components```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Server:** ```AWS AMPLIFY``` ```AWS APPSYNC``` ```AMAZON COGNITO```
+
+
+## Screenshots
+
+![](https://i.ibb.co/mHWBP81/logo.png)
+
+![](https://i.ibb.co/WgzmbdQ/Screenshot-163.png)
+
+![](https://i.ibb.co/7b7nRxH/Screenshot-164.png)
+
+![](https://i.ibb.co/ZcVYnw5/Screenshot-165.png)
+
+![](https://i.ibb.co/m5GGz3C/Screenshot-166.png)
+
+![](https://i.ibb.co/PYrqJRN/Screenshot-167.png)
+
+![](https://i.ibb.co/BCDF1RD/Screenshot-168.png)
+
+![](https://i.ibb.co/5T1B5J7/Screenshot-169.png)
+
+![](https://i.ibb.co/99K3FLX/Screenshot-170.png)
+
+![](https://i.ibb.co/jvtX1j8/Screenshot-171.png)
+
+![](https://i.ibb.co/PwtNvH8/Screenshot-172.png)
+
+![](https://i.ibb.co/7NPLF2g/Screenshot-173.png)
+
+![](https://i.ibb.co/fN2v55n/Screenshot-174.png)
+
+![](https://i.ibb.co/v3zyV0n/Screenshot-175.png)
+
+![](https://i.ibb.co/fnnhmVR/Screenshot-176.png)
+
+![](https://i.ibb.co/HzKFqhb/Screenshot-177.png)
+
+![](https://i.ibb.co/DCyqPcj/Screenshot-178.png)
+
+![](https://i.ibb.co/dPkjv4r/Screenshot-179.png)
+
+![](https://i.ibb.co/DDmm4w7/Screenshot-180.png)
+
+![](https://i.ibb.co/XFc1TC5/Screenshot-181.png)
+## Features
+
+- User Authentication with email verification
+- Create, update and Delete Posts
+- Rich text editor support, with Image upload to Cloud
+- GraphQL API, dynamoDB support
+- Email notification on post comment
+- S3 bucket for storing image and other assets
+- Profile Image support
+- Follow other User support.
+
+
+
+## This project is dormant and no longer in use.
+## Roadmap
+
+- Adding custom Feed and posts
+
+- Add more integrations
+
+- Add bookmark and repost a post
+
+
+
+
+## Deployment
+ This project is not deployed due to cost  from aws services
+

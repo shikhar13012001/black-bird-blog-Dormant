@@ -407,6 +407,7 @@ export async function getServerSideProps({ req, query }) {
     variables: {
       id: id,
     },
+    authMode: "AMAZON_COGNITO_USER_POOLS",
   });
 
   return {

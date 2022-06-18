@@ -11,7 +11,13 @@ const Disclaimer = () => {
         <Grid item xs={12} sm={12} md={6} lg={6} sx={Center}>
           <Typography
             variant="h1"
-            sx={{ fontWeight: "light", color: "black", mt: 3, fontSize: 128 }}
+            fontSize={{
+              lg: 128,
+              md: 96,
+              sm: 72,
+              xs: 48,
+            }}
+            sx={{ fontWeight: "light", color: "black", mt: 3 }}
           >
             Disclaimer
           </Typography>
@@ -24,7 +30,14 @@ const Disclaimer = () => {
             you are interested in this project, please curb your curiosity.
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6} sx={{ ...Center ,alignItems:'center'}}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{ ...Center, alignItems: "center" }}
+        >
           <Image
             src={require("../public/disclaimer.png")}
             alt="disclaimer"

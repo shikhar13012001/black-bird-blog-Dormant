@@ -24,14 +24,25 @@ const Article = () => {
       >
         <Typography
           variant="h1"
-          sx={{ fontWeight: "light", color: "white", mt: 3, fontSize: 128 }}
+          fontSize={{
+            lg: 128,
+            md: 96,
+            sm: 72,
+            xs:100,
+          }}
+          sx={{ fontWeight: "light", color: "white", mt: 3 }}
         >
           Write your Life here
         </Typography>
         <Typography
           variant="body1"
-          
-          sx={{color:"gray", fontWeight: "light",width:"70%",textAlign:'justify',ml:2 }}
+          sx={{
+            color: "gray",
+            fontWeight: "light",
+            width: "70%",
+            textAlign: "justify",
+            ml: 2,
+          }}
         >
           People say that Facebook, Quora, Twitter and Google+ are great for
           idea generation – and they’re right. I think it’s also important to

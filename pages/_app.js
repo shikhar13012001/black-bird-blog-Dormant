@@ -24,6 +24,8 @@ import { CgFeed, CgProfile } from "react-icons/cg";
 import SEO from "../components/SEO";
 import { ImBlog } from "react-icons/im";
 import config from "../aws-exports";
+import Search from "../components/Search"
+import {BsSearch} from "react-icons/bs"
 Amplify.configure({ ...config, ssr: true });
 
 function MyApp({ Component, pageProps }) {
@@ -82,6 +84,9 @@ function MyApp({ Component, pageProps }) {
                           <Image src={Logo} alt="logo" className="w-12" />
                         </span>
                       </Link>
+                      <span className="m-auto cursor-pointer">
+                      <Search />
+                      </span>
                       <Link href="/create-post">
                         <span className="mr-6 cursor-pointer">
                           <GoMarkdown />
@@ -96,6 +101,7 @@ function MyApp({ Component, pageProps }) {
                           Profile
                         </span>
                       </Link>
+                        
                       <Link href="/Feed">
                         <span className="mr-6 cursor-pointer">
                           <CgFeed />

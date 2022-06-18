@@ -18,9 +18,12 @@ import Disclaimer from "../components/Disclaimer";
 import BuiltUsing from "../components/BuiltUsing";
 import CircularHeading from "../components/CircularHeading";
 import * as THREE from "three";
+import Thunder from "../public/67.svg";
 import BIRDS from "vanta/dist/vanta.birds.min";
 import Team from "../components/Team";
 import Article from "../components/ArticleofWeek";
+import Image from "next/image";
+
 const style = {
   Container: {
     width: "100%",
@@ -101,6 +104,13 @@ export default function Home() {
   }, [vantaEffect]);
   useEffect(() => {
     fetchPosts();
+    //     const circularText = document.getElementById('circular-text')
+
+    // curveText({
+    //     element : circularText,
+    //     radius : 300,
+    //     angle : 360
+    // });
   }, []);
   async function fetchPosts() {
     const postData = await API.graphql({
@@ -135,7 +145,7 @@ export default function Home() {
         Fork me on GitHub
       </a>
       <Banner />
-     
+
       <Divider sx={{ mb: 3 }} />
       <Typography
         fontSize={{
@@ -150,8 +160,11 @@ export default function Home() {
       >
         Create Creative Content
       </Typography>
+      <Box sx={{ width:"100%",display: "grid", placeContent:'center' }}>
+        <Image src={Thunder} alt="thunder svg" />
+      </Box>
       <Typography variant="body1" sx={{ textAlign: "center", mt: 3 }}>
-        @BlackBird is home to thousand's of post related to tech, business,
+        @BlackBird is home to thousand&apos;s of post related to tech, business,
         design.
         <br />
         You can also create your own story and share it with the world.
@@ -205,6 +218,9 @@ export default function Home() {
             arc={270}
             radius={340}
           />
+          {/* <Typography variant="h1" id="circular-text" sx={{fontFamily:'Bosch!important',fontWeight:'light'}}>
+            @BlackBird is Forceful Natural beautiful
+            </Typography> */}
         </div>
       </Box>
       <Disclaimer />
